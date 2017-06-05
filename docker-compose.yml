@@ -3,6 +3,8 @@ services:
   teambition-nginx-gateway:
     image: docker-registry.teambition.net/library/teambition-nginx-gateway:0.2.0
     container_name: teambition-gninx-gateway
+    ports:
+      - 3000:3000
     environment:
       APP_HOST: 'http://localhost'
       APP_CLIENT_ID: '78737a90-49bd-11e7-9659-95e4a6783161'
