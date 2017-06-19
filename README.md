@@ -10,7 +10,7 @@ teambition-nginx-gateway
 ### Teambition 应用
 到 https://account.teambition.com/my/apps 添加一个应用，注意回调地址必须是主域加上`/callback`。
 
-### nginx配置
+### nginx >=1.7.8 配置
 ```
 server {
   ...
