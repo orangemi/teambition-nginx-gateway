@@ -1,6 +1,6 @@
 {
   "name": "teambition-nginx-gateway",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "lib/app.js",
   "author": "Orange Mi <orangemiwj@gmail.com>",
   "license": "MIT",
