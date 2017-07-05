@@ -9,7 +9,7 @@
     "start": "node lib/app.js"
   },
   "dependencies": {
-    "koa": "1",
+    "koa": "^1",
     "koa-router": "^7.2.0",
     "nodemon": "^1.11.0",
     "urllib": "^2.22.0"
