@@ -5,11 +5,11 @@
   "author": "Orange Mi <orangemiwj@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --ext js,yml lib/app.js",
+    "dev": "APP_CLIENT_ID=78737a90-49bd-11e7-9659-95e4a6783161 APP_CLIENT_SECRET=ee4076c9-65d3-4e1e-a23f-c20fb3c58479 APP_HOST=https://imxiaomi.localhost:8443 nodemon --ext js,yml lib/app.js",
     "start": "node lib/app.js"
   },
   "dependencies": {
-    "koa": "1",
+    "koa": "^1",
     "koa-router": "^7.2.0",
     "nodemon": "^1.11.0",
     "urllib": "^2.22.0"
