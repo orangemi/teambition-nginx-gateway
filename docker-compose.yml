@@ -1,11 +1,15 @@
 version: '2'
 services:
   teambition-nginx-gateway:
-    image: docker-registry.teambition.net/library/teambition-nginx-gateway:0.2.0
-    container_name: teambition-gninx-gateway
+    image: docker-registry.teambition.net/library/teambition-nginx-gateway:0.2.2
+    container_name: teambition-nginx-gateway
     ports:
       - 3000:3000
     environment:
-      APP_HOST: 'http://localhost'
-      APP_CLIENT_ID: '78737a90-49bd-11e7-9659-95e4a6783161'
-      APP_CLIENT_SECRET: 'ee4076c9-65d3-4e1e-a23f-c20fb3c58479'
+      APP_HOST: http://localhost # not concern whether is reachable for the service
+      APP_CLIENT_ID: 78737a90-49bd-11e7-9659-95e4a6783161
+      APP_CLIENT_SECRET: ee4076c9-65d3-4e1e-a23f-c20fb3c58479
+      # APP_TEAMBITION_ORG_ID: 50c32afae8cf1439d35a87e6
+      # APP_TEAMBITION_PROJECT_ID: 5968166d1d9d86106459f2f1
+      # APP_COOKIE_KEY: Teambition-Access-Token
+

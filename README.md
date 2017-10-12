@@ -3,7 +3,7 @@ teambition-nginx-gateway
 
 ## 思路
 
-利用nginx [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/)的方法，在`资源服务`前加入`权限服务`。
+利用nginx [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/)的方法，在`资源服务`前加入`权限服务`。 本项目利用[Teambition](https://www.teambition.com)中项目成员管理系统。
 
 ## 配置
 
@@ -27,18 +27,14 @@ server {
 
 ### 应用部署
 参考文件中`docker-compose.yml`, 在环境变量中配置以下项目：
-- APP_HOST: 主域名
+- APP_HOST: 资源服务域名
 - APP_CLIENT_ID: Teambition申请应用的Client_Key
 - APP_CLIENT_SECRET: Teambition申请应用的Client_Secret
-- APP_TEAMBITION_ORG_ID: Teambition企业ID， 一般不用修改，默认为 50c32afae8cf1439d35a87e6
-- APP_COOKIE_KEY: Cookie键值， 默认为 Teambition-Access-Token
+- APP_TEAMBITION_ORG_ID: Teambition企业ID, 默认为 50c32afae8cf1439d35a87e6
+- APP_TEAMBITION_PROJECT_ID: Teambition项目ID, 限定用户只能是某项目中的成员, 默认为空
+- APP_COOKIE_KEY: Cookie键值, 默认为 Teambition-Access-Token, 其Value为Teambition Access Token
 
-## 服务实现内容[待定]
-- [x] 检查请求者的 Teambition 账号
-- [x] 该账号是否在 Teambition 企业里面？
-- [x] 最后执行 `this.set('X-Accel-Redirect', '@xaccel')` 标记授权
-
-## 其他TODO
+## TODO
 - [ ] 添加测试
 - [ ] 能够插入其他中间件
 - [ ] 能够配置中间件参数
