@@ -27,10 +27,10 @@ server {
 
 ### 应用部署
 参考文件中`docker-compose.yml`, 在环境变量中配置以下项目：
-- APP_HOST: 资源服务域名
+- APP_HOST: 资源服务域名含http(s)用于授权时跳转用 例如：`https://elk.teambition.net`
 - APP_CLIENT_ID: Teambition申请应用的Client_Key
 - APP_CLIENT_SECRET: Teambition申请应用的Client_Secret
-- APP_TEAMBITION_ORG_ID: Teambition企业ID, 默认为 50c32afae8cf1439d35a87e6
+- APP_TEAMBITION_ORG_ID: Teambition企业ID, 限定用户只能是某企业中的成员, 默认为空
 - APP_TEAMBITION_PROJECT_ID: Teambition项目ID, 限定用户只能是某项目中的成员, 默认为空
 - APP_COOKIE_KEY: Cookie键值, 默认为 Teambition-Access-Token, 其Value为Teambition Access Token
 
