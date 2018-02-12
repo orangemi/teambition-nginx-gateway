@@ -1,7 +1,7 @@
 version: '2'
 services:
   teambition-nginx-gateway:
-    image: docker-registry.teambition.net/library/teambition-nginx-gateway:0.2.2
+    image: docker-registry.teambition.net/library/teambition-nginx-gateway
     container_name: teambition-nginx-gateway
     ports:
       - 3000:3000
